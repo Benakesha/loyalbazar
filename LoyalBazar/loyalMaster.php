@@ -20,16 +20,16 @@
   <title>LoyalBazar.Com</title>
   <style type="text/css">
     	body {
-			min-height: 75rem;
-  	  padding-top: 3.6rem;
+		  padding-top: 3.6rem;
       background-image: url("Images/egg-tray1.jpg");
       height: 100% !important;
       background-repeat: no-repeat;
 
 		}
-	.navbar-nav > li {
+	 .navbar-nav > li {
         margin-right: 15px;
         font-size: 25px;
+     
        
      }
      .navbar-nav > li:hover{
@@ -51,6 +51,7 @@
      a {
      text-decoration: none !important;
      font-size: 20px;	
+     padding-bottom:  5px;
 	}
 	.logout:hover{
 		background-color: orange;
@@ -59,7 +60,7 @@
 	 .logout{
 	 	color: white;
 	 }
-		
+  	
     </style>
   </head>
 
@@ -69,9 +70,9 @@
   			<div class="col-md-12" >
   			<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       			<?php  if($role=='adminuser'){ ?>
-      				<a class="navbar-brand" href="loyalMaster.php?Page=Dashboard" style="color:orange;font-size: 25px;font-weight: bold;" title="LoyalBazar.com">LoyalBazar</a>
+      				<a class="navbar-brand" href="loyalMaster.php?Page=Dashboard" style="color:orange;font-size: 25px;font-weight: bold;" title="LoyalBazar.com">LoyalBazar.Com</a>
     			<?php }else {?>
-      				<a class="navbar-brand" href="loyalMaster.php?Page=clientDashboard" style="color:orange;font-size: 25px;font-weight: bold;" title="LoyalBazar.com">LoyalBazar</a>
+      				<a class="navbar-brand" href="loyalMaster.php?Page=clientDashboard" style="color:orange;font-size: 25px;font-weight: bold;" title="LoyalBazar.com">LoyalBazar.Com</a>
     			<?php } ?>
       			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         		<span class="navbar-toggler-icon"></span>
@@ -84,7 +85,7 @@
             				<a href="loyalMaster.php?Page=Dashboard">&nbsp;Dashboard</a>
           				</li>
           				<li class="nav-item">
-            				<a href="loyalMaster.php?Page=sendTreay" style="color:white;">&nbsp;Send Treay</a>
+            				<a href="loyalMaster.php?Page=sendTreay" style="color:white;">&nbsp;Send Tray</a>
           				</li>
           				<li class="nav-item">
             				<a href="loyalMaster.php?Page=addUser" style="color:white;">&nbsp;Add User</a>
@@ -96,8 +97,11 @@
             				<a href="loyalMaster.php?Page=clientDashboard">Dashboard</a>
           				</li>
           				<li class="nav-item">
-            				<a href="loyalMaster.php?Page=sendTreay" style="color:white;">Send Treay</a>
+            				<a href="loyalMaster.php?Page=sendTreay" style="color:white;">Send Tray</a>
           				</li>
+                  <li class="nav-item">
+                    <a href="loyalMaster.php?Page=requestTray" style="color:white;">Request Tray</a>
+                  </li>
           				<li class="nav-item">
             				<a href="loyalMaster.php?Page=addUser" style="color:white;">Add User</a>
           				</li>
@@ -134,6 +138,8 @@
                 include("addSubClient.php");
               }elseif($_GET["Page"]=="editTreay"){
                 include("editRow.php");
+              }elseif($_GET["Page"]=="requestTray"){
+                include("requestTray.php");
               }
    }
     ?>
@@ -141,9 +147,57 @@
 	    </main>
   	</div>
   	     
+    <footer class="page-footer text-center text-md-left font-small bg-dark fixed-bottom" style="margin-top:100px;color: white;">
 
+        <!--Footer Links-->
+      <!--  <div class="container-fluid text-center text-md-left">
+            <div class="row">
+
+             
+                <div class="col-md-6 pb-3">
+                    <h5 class="text-uppercase"></h5>
+                    <p>Here you can use rows and columns here to organize your footer content.</p>
+                </div>
+              
+
+           <div class="col-md-6 pb-3">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+       -->
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3 text-center">
+            © 2018 Copyright:&nbsp;
+              <?php  if($role=='adminuser'){ ?>
+            <a href="loyalMaster.php?Page=Dashboard" style="color: orange;">
+              <?php }else { ?>
+            <a href="loyalMaster.php?Page=clientDashboard" style="color: orange;">
+              <?php } ?>
+            LoyalBazar.com </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
     <!-- /.container -->
 </div>
+
 
     
   </body>

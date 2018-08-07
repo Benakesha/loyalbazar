@@ -1,5 +1,5 @@
 
-<div class="container" style="margin-top: 2%;">
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="container"  style="margin-left: 20%;">
@@ -26,6 +26,12 @@
 								</div>
 							</div><br>
 							<div class="input-group" style="width:40%;">
+								<input type="text" name="txtEmailId" class="form-control" placeholder="Email Id">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fa fa-at"></i></span>
+								</div>
+							</div><br>
+							<div class="input-group" style="width:40%;">
 								<input type="password" name="txtPassword" class="form-control" placeholder="Password">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-key"></i></span>
@@ -47,9 +53,9 @@
 								</select>
 								
 							</div><br>
-							<div class="input-group" style="width:30%;margin-left: 40px;">
+							<div class="input-group" style="width:40%;">
 								<button type="submit" id="addUser" name="addUser" class="btn btn-success form-control">Add User</button>
-							</div>
+							</div><br><br><br><br><br><br>
 						</form>
 					</div>
 				</div>

@@ -26,6 +26,12 @@
 								</div>
 							</div><br>
 							<div class="input-group" style="width:40%;">
+								<input type="text" name="txtEmailId" class="form-control" placeholder="Email Id">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fa fa-at"></i></span>
+							</div>
+							</div><br>
+							<div class="input-group" style="width:40%;">
 								<input type="password" name="txtPassword" class="form-control" placeholder="Password">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-key"></i></span>
